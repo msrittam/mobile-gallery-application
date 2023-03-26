@@ -1,0 +1,54 @@
+import React from'react';import{Image,FlatList,View}from'react-native';
+import{createAppContainer}from'react-navigation';import{createStackNavigator}from'react-navigation-stack';
+const data0=[{key:1,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'},
+{key:2,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'}]
+const data1=[{key:1,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'},
+{key:2,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'}]
+const data2=[{key:1,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'},
+{key:2,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'}]
+const data3=[{key:1,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'},
+{key:2,one:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+two:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+three:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8',
+four:'https://firebasestorage.googleapis.com/v0/b/authentication-81680.appspot.com/o/06.png?alt=media&token=fcfcc9f3-4a48-47e7-bd04-1b11d1d682c8'}]
+const homescreen=(props)=>{return(<View><View style={{marginLeft:5,marginRight:5,marginTop:5,paddingTop:5,paddingHorizontal:25,
+backgroundColor:'#36303F',borderRadius:25}}onStartShouldSetResponder={()=>{props.navigation.navigate('scroll2',{pass:data0})}}>
+<Image source={{uri:data0[0].one}}style={{marginBottom:5,resizeMode:'stretch',height:130,width:300}}/></View>
+<View style={{marginLeft:5,marginRight:5,marginTop:5,paddingTop:5,paddingHorizontal:25,backgroundColor:'#36303F',
+borderRadius:25}}onStartShouldSetResponder={()=>{props.navigation.navigate('scroll2',{pass:data1})}}>
+<Image source={{uri:data1[0].one}}style={{marginBottom:5,resizeMode:'stretch',height:130,width:300}}/></View>
+<View style={{marginLeft:5,marginRight:5,marginTop:5,paddingTop:5,paddingHorizontal:25,backgroundColor:'#36303F',
+borderRadius:25}}onStartShouldSetResponder={()=>{props.navigation.navigate('scroll2',{pass:data2})}}>
+<Image source={{uri:data2[0].one}}style={{marginBottom:5,resizeMode:'stretch',height:130,width:300}}/></View>
+<View style={{marginLeft:5,marginRight:5,marginTop:5,paddingTop:5,paddingHorizontal:25,backgroundColor:'#36303F',
+borderRadius:25}}onStartShouldSetResponder={()=>{props.navigation.navigate('scroll2',{pass:data3})}}>
+<Image source={{uri:data3[0].one}}style={{marginBottom:5,resizeMode:'stretch',height:130,width:300}}/></View></View>)}
+const scroll2=(props)=>{return(<FlatList data={props.navigation.getParam('pass','')}keyExtractor={(item)=>item.key}
+contentContainerStyle={{paddingLeft:5}}showsHorizontalScrollIndicator={false}horizontal renderItem={({item})=>{return(
+<View style={{marginRight:5,marginTop:5,paddingTop:25,paddingHorizontal:5,backgroundColor:'#36303F',borderRadius:25,height:600}}>
+<Image source={{uri:item.one}}style={{marginBottom:5,resizeMode:'stretch',height:130,width:300}}/>
+<Image source={{uri:item.two}}style={{marginBottom:5,resizeMode:'stretch',height:130,width:300}} />
+<Image source={{uri:item.three}}style={{marginBottom:5,resizeMode:'stretch',height:130,width:300}}/>
+<Image source={{uri:item.four}}style={{marginBottom:25,resizeMode:'stretch',height:130,width:300 }}/></View>)}}/>)}
+export default createAppContainer(createStackNavigator({homescreen,scroll2}))//git clone https://github.com/0x-cygnet/rn-starter.git
